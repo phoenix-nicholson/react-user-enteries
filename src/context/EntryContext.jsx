@@ -5,7 +5,7 @@ const EntryContext = createContext();
 const EntryProvider = ({ children }) => {
   const [entry, setEntry] = useState([]);
 
-  return <EntryContext.Provider value={(entry, setEntry)}>{children}</EntryContext.Provider>;
+  return <EntryContext.Provider value={{ entry, setEntry }}>{children}</EntryContext.Provider>;
 };
 
 const useEntry = () => {
