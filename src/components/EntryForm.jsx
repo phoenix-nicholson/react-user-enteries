@@ -10,18 +10,16 @@ export default function EntryForm() {
 
   function updateEntryList() {
     if (!newEntry) return setUser(name);
-    setEntry([...entry, { name: name, entry: newEntry }]);
+    setEntry([...entry, { name: name, entry: newEntry, id: Math.floor(Math.random() * 100) }]);
   }
 
   const handleSubmit = (e) => {
     e.preventDefault();
     updateEntryList();
   };
-  console.log('entry', entry);
-  console.log('user', user);
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="your name"
@@ -34,7 +32,7 @@ export default function EntryForm() {
           value={newEntry}
           onChange={(e) => setNewEntry(e.target.value)}
         />
-        <button onClick={handleSubmit}>submit entry</button>
+        <button>submit entry</button>
       </form>
     </div>
   );
