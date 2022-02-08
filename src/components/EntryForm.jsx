@@ -9,8 +9,12 @@ export default function EntryForm() {
   const [newEntry, setNewEntry] = useState('');
 
   function updateEntryList() {
-    if (!newEntry) return setUser(name);
-    setEntry([...entry, { name: name, entry: newEntry, id: Math.floor(Math.random() * 100) }]);
+    setUser(name);
+    setEntry((prevState) => [
+      ...prevState,
+      { name: name, entry: newEntry, id: Math.floor(Math.random() * 100) },
+    ]);
+    setNewEntry('');
   }
 
   const handleSubmit = (e) => {
