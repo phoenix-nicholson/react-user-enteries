@@ -6,6 +6,7 @@ button {
 .label {
   font-family: 'Lobster', cursive;
   font-weight: lighter;
+  font-size: 1.3rem;
 }
 input {
   padding: 5px;
