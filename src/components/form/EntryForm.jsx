@@ -24,12 +24,15 @@ export default function EntryForm() {
   };
 
   const changeName = (
-    <input
-      type="text"
-      placeholder="your name"
-      value={name}
-      onChange={(e) => setName(e.target.value)}
-    />
+    <label>
+      <h4>Name:</h4>
+      <input
+        type="text"
+        placeholder="your name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+    </label>
   );
   const handleName = (e) => {
     e.preventDefault();
@@ -41,12 +44,15 @@ export default function EntryForm() {
     <div>
       <form onSubmit={handleSubmit}>
         {user ? null : changeName}
-        <input
-          type="text"
-          placeholder="your entry"
-          value={newEntry}
-          onChange={(e) => setNewEntry(e.target.value)}
-        />
+        <label>
+          <h4>Entry:</h4>
+          <input
+            type="text"
+            placeholder="your entry"
+            value={newEntry}
+            onChange={(e) => setNewEntry(e.target.value)}
+          />
+        </label>
         <button>submit entry</button>
         <button onClick={handleName}> switch name</button>
       </form>

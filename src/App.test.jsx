@@ -10,11 +10,11 @@ test('components have behavior', () => {
     </UserProvider>
   );
 
-  const userName = screen.getByRole('textbox', { name: /your name/i });
+  const userName = screen.getByRole('textbox', { name: /name:/i });
   const name = 'phoenix';
   expect(name).toBe('phoenix');
 
-  const userEntry = screen.getByRole('textbox', { name: /your entry/i });
+  const userEntry = screen.getByRole('textbox', { name: /entry:/i });
   const entry = 'hi';
   expect(entry).toBe('hi');
 
