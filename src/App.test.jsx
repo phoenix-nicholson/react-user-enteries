@@ -12,6 +12,17 @@ test('components have behavior', () => {
 
   const userName = screen.getByRole('textbox', { name: /your name/i });
   const name = 'phoenix';
-  userEvent.type(userName, name);
   expect(name).toBe('phoenix');
+
+  const userEntry = screen.getByRole('textbox', { name: /your entry/i });
+  const entry = 'hi';
+  expect(entry).toBe('hi');
+
+  const submitBtn = screen.getByRole('button', { name: /submit entry/i });
+
+  userEvent.type(userName, name);
+  userEvent.type(userEntry, entry);
+  userEvent.click(submitBtn);
+
+  expect(screen.getByRole('heading', { name: /name: phoenix/i })).toBeInTheDocument();
 });
