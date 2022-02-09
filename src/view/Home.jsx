@@ -1,5 +1,5 @@
-import EntryForm from '../components/EntryForm';
-import EntryList from '../components/EntryList';
+import EntryForm from '../components/form/EntryForm';
+import EntryList from '../components/list/EntryList';
 import Header from '../components/Header';
 import { EntryProvider } from '../context/EntryContext';
 

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { useEntry } from '../context/EntryContext';
-import { useUser } from '../context/UserContext';
+import { useEntry } from '../../context/EntryContext';
+import { useUser } from '../../context/UserContext';
 
 export default function EntryForm() {
   const { user, setUser } = useUser();
-  const { entry, setEntry } = useEntry();
+  const { setEntry } = useEntry();
   const [name, setName] = useState('');
   const [newEntry, setNewEntry] = useState('');
 
@@ -21,15 +21,25 @@ export default function EntryForm() {
     e.preventDefault();
     updateEntryList();
   };
+
+  const changeName = (
+    <input
+      type="text"
+      placeholder="your name"
+      value={name}
+      onChange={(e) => setName(e.target.value)}
+    />
+  );
+  const handleName = (e) => {
+    e.preventDefault();
+    setUser('');
+    setName('');
+  };
+
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="your name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
+        {user ? null : changeName}
         <input
           type="text"
           placeholder="your entry"
@@ -37,6 +47,7 @@ export default function EntryForm() {
           onChange={(e) => setNewEntry(e.target.value)}
         />
         <button>submit entry</button>
+        <button onClick={handleName}> switch name</button>
       </form>
     </div>
   );
