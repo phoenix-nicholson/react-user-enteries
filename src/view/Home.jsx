@@ -1,6 +1,6 @@
 import EntryForm from '../components/form/EntryForm';
 import EntryList from '../components/list/EntryList';
-import Header from '../components/Header';
+import Header from '../components/Header/Header';
 import { EntryProvider } from '../context/EntryContext';
 import '../view/Home.css';
 

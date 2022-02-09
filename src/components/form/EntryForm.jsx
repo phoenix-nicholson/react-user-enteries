@@ -25,7 +25,7 @@ export default function EntryForm() {
 
   const changeName = (
     <label>
-      <h4>Name:</h4>
+      <h4 className="label">Name:</h4>
       <input
         type="text"
         placeholder="your name"
@@ -45,7 +45,7 @@ export default function EntryForm() {
       <form onSubmit={handleSubmit}>
         {user ? null : changeName}
         <label>
-          <h4>Entry:</h4>
+          <h4 className="label">Entry:</h4>
           <input
             type="text"
             placeholder="your entry"
@@ -53,6 +53,7 @@ export default function EntryForm() {
             onChange={(e) => setNewEntry(e.target.value)}
           />
         </label>
+        <br />
         <button>submit entry</button>
         <button onClick={handleName}> switch name</button>
       </form>

@@ -3,3 +3,12 @@ button {
   margin: 2px;
   border: 1px solid transparent;
 }
+.label {
+  font-family: 'Lobster', cursive;
+  font-weight: lighter;
+}
+input {
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid transparent;
+}

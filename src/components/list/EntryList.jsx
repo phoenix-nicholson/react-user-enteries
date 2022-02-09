@@ -8,8 +8,8 @@ export default function EntryList() {
     <div className="listCard">
       {entry.map(({ name, entry, id }) => (
         <div className="entryCard" key={id}>
-          <h4>name: {name} </h4>
-          <p>entry: {entry} </p>
+          <h4> {name} </h4>
+          <p> {entry} </p>
         </div>
       ))}
     </div>
