@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useEntry } from '../../context/EntryContext';
 import { useUser } from '../../context/UserContext';
+import './EntryForm.css';
 
 export default function EntryForm() {
   const { user, setUser } = useUser();
