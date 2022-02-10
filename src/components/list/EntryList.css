@@ -1,5 +1,5 @@
 .entryCard {
-  border: 2px dotted black;
+  border: 2px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,4 +15,5 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  color: black;
 }
