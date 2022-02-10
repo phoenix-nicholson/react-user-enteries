@@ -4,6 +4,7 @@ button {
   border: 1px solid black;
   border-radius: 3px;
   font-family: 'Balsamiq Sans', cursive;
+  margin-top: 10px;
 }
 .label {
   font-family: 'Lobster', cursive;
@@ -16,4 +17,5 @@ input {
   margin: 5px;
   border: 2px solid black;
   border-radius: 5px;
+  text-align: center;
 }
