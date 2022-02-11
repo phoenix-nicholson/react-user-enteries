@@ -1,0 +1,19 @@
+.entryCard {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  width: 200px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-right: 5px;
+  background-color: white;
+  font-family: 'Architects Daughter', cursive;
+}
+.listCard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: black;
+}
