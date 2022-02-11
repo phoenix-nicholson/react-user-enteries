@@ -7,7 +7,7 @@ body {
 }
 
 body.light-mode {
-  background-image: url('../assets/day.jpg');
+  background-color: lightskyblue;
   color: #333;
   transition: background-color 0.3s ease;
   background-repeat: no-repeat;
@@ -15,7 +15,7 @@ body.light-mode {
 }
 
 body.dark-mode {
-  background-image: url('../assets/night.jpg');
+  background-color: rgb(53, 52, 52);
   color: black;
   background-size: cover;
   background-repeat: no-repeat;
