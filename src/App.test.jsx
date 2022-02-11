@@ -24,5 +24,5 @@ test('components have behavior', () => {
   userEvent.type(userEntry, entry);
   userEvent.click(submitBtn);
 
-  expect(screen.getByRole('heading', { name: /name: phoenix/i })).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: /phoenix/i }));
 });
