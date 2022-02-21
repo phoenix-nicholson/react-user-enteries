@@ -1,0 +1,21 @@
+button {
+  background-color: white;
+  margin: 2px;
+  border: 1px solid black;
+  border-radius: 3px;
+  font-family: 'Balsamiq Sans', cursive;
+  margin-top: 10px;
+}
+.label {
+  font-family: 'Lobster', cursive;
+  font-weight: lighter;
+  font-size: 1.3rem;
+  text-shadow: -1px -1px 0 rgb(253, 252, 252), 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+input {
+  padding: 5px;
+  margin: 5px;
+  border: 2px solid black;
+  border-radius: 5px;
+  text-align: center;
+}
