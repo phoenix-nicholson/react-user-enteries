@@ -13,10 +13,12 @@ const Auth = () => {
     history.replace(from.pathname);
   };
   return (
-    <form>
+    <>
       <h1>Sign In</h1>
-      <button onClick={handleLogin}>sign in miklo!</button>
-    </form>
+      <form onSubmit={handleLogin}>
+        <button type="submit">sign in miklo!</button>
+      </form>
+    </>
   );
 };
 export default Auth;
