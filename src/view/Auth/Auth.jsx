@@ -2,14 +2,16 @@ import { useLocation } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 import { useUser } from '../../context/UserContext';
 
-const Auth = () => {
+export default function Auth() {
   const { setUser } = useUser();
   const history = useHistory();
   const location = useLocation();
 
-  const handleLogin = () => {
+  const { from } = location.state || { from: { pathname: '/' } };
+
+  const handleLogin = (e) => {
+    e.preventDefault();
     setUser('miklo');
-    const { from } = location.state || { from: { pathname: '/' } };
     history.replace(from.pathname);
   };
   return (
@@ -20,5 +22,4 @@ const Auth = () => {
       </form>
     </>
   );
-};
-export default Auth;
+}
