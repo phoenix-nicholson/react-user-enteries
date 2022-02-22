@@ -5,12 +5,14 @@ import DarkModeToggle from '../../DarkMode/DarkModeToggle';
 import '../../DarkMode/DarkMode.scss';
 
 export default function Header() {
-  const { user } = useUser();
+  const {
+    user: { name },
+  } = useUser();
 
   return (
     <div className="header">
       <DarkModeToggle />
-      Welcome {user ? user : 'Guest'}!
+      Welcome {name ? name : 'Guest'}!
     </div>
   );
 
