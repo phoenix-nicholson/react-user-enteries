@@ -3,11 +3,13 @@ import EntryList from '../../components/list/EntryList';
 import Header from '../../components/Header/Header';
 import { EntryProvider } from '../../context/EntryContext';
 import '../Home/Home.css';
+import Auth from '../Auth/Auth';
 
 export default function Home() {
   return (
     <EntryProvider>
       <Header />
+      <Auth />
       <EntryForm />
       <EntryList />
     </EntryProvider>
