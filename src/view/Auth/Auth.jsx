@@ -39,7 +39,7 @@ export default function Auth() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">sign in miklo!</button>
+        <button type="submit">sign in!</button>
       </form>
     </>
   );
