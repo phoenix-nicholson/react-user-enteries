@@ -32,8 +32,13 @@ export default function Auth() {
     <>
       <h1>Sign In</h1>
       <form onSubmit={handleLogin}>
-        <input type="name" name="name" id="name" />
-        <input type="password" name="password" id="password" />
+        <input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} />
+        <input
+          type="text"
+          name="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
         <button type="submit">sign in miklo!</button>
       </form>
     </>
