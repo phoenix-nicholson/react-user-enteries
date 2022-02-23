@@ -32,8 +32,15 @@ export default function Auth() {
     <>
       <h1>Sign In</h1>
       <form onSubmit={handleLogin}>
-        <input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} />
         <input
+          type="text"
+          name="name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="Enter your name"
+        />
+        <input
+          placeholder="Enter your password"
           type="text"
           name="password"
           value={password}
